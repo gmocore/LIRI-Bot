@@ -3,6 +3,7 @@ const keys = require("./keys.js");
 const Spotify = require("node-spotify-api");
 const axios = require("axios");
 const moment = require("moment");
+const omdb = require("omdb");
 const spotify = new Spotify({
   id: process.env.SPOTIFY_CLIENT_ID,
   secret: process.env.SPOTIFY_CLIENT_SECRET
@@ -26,15 +27,28 @@ const artist = process.argv.slice(2).join(" ");
 //     console.log("Error: ", err.code);
 //   });
 
-spotify
-  .search({ type: "track", query: artist, limit: 5 })
-  .then(response => {
-    let data = response.tracks.items[0]
-    console.log(data.name)
-    console.log(data.artists[0].name);
-    console.log(data.album.name);
-    console.log(data.preview_url);
-  })
-  .catch(err => {
-    console.log("Error: ", err);
-  });
+// spotify
+//   .search({ type: "track", query: artist, limit: 5 })
+//   .then(response => {
+//     let data = response.tracks.items[0]
+//     console.log(data.name)
+//     console.log(data.artists[0].name);
+//     console.log(data.album.name);
+//     console.log(data.preview_url);
+//   })
+//   .catch(err => {
+//     console.log("Error: ", err);
+//   });
+
+axios.get(`http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&t=${artist}`).then(movies => {
+  console.log('title: ', movies.data.Title)
+  console.log('Rating: ', movies.data.Rated)
+  console.log('IMDB Rating: ', movies.data.imdbRating)
+  console.log('RT Score: ', movies.data.Ratings[1].Value)
+  console.log('Country: ', movies.data.Country)
+  console.log('Language: ', movies.data.Language)
+  console.log('Plot: ', movies.data.Plot)
+  console.log('Actors: ', movies.data.Actors)
+}).catch(err => {
+  console.log(err)
+})
