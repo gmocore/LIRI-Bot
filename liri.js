@@ -9,18 +9,20 @@ const spotify = new Spotify({
   id: process.env.SPOTIFY_CLIENT_ID,
   secret: process.env.SPOTIFY_CLIENT_SECRET
 });
-// const artist = process.argv[2]
-
-const artist = process.argv.slice(3).join(" ");
+let artist = process.argv.slice(3).join(" ");
 let cliriQuery = process.argv[2];
 
 // process.argv.slice(2).join('%20)
 const searchBand = band => {
   axios
     .get(
-      `https://rest.bandsintown.com/artists/${artist}/events?app_id=${process.env.BANDS_IN_TOWN_API_KEY}`
+      `https://rest.bandsintown.com/artists/${band}/events?app_id=${process.env.BANDS_IN_TOWN_API_KEY}`
     )
     .then(response => {
+      // console.log(response.data.length)
+      if(response.data.length === 0) {
+        console.log(`Sorry, ${artist} has no upcoming concerts`)
+      }
       response.data.forEach(item => {
         console.log(
           `venue name: ${item.venue.name} city: ${item.venue.city} state: ${
@@ -39,6 +41,9 @@ const searchSong = songName => {
   spotify
     .search({ type: "track", query: songName, limit: 5 })
     .then(response => {
+      if(response.tracks.total === 0) {
+        return console.log(`${songName} is not a valid song, try typing it correctly, or choosing a song that isn't by one of your friends`)
+      }
       let data = response.tracks.items[0];
       console.log(data.name);
       console.log(data.artists[0].name);
@@ -56,6 +61,10 @@ const searchMovie = movie => {
       `http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&t=${movie}`
     )
     .then(movies => {
+      if(movies.data.Error) {
+        
+        return console.log(movies.data.Error, 'try typing it correctly?')
+      }
       console.log("title: ", movies.data.Title);
       console.log("Rating: ", movies.data.Rated);
       console.log("IMDB Rating: ", movies.data.imdbRating);
@@ -70,23 +79,38 @@ const searchMovie = movie => {
     });
 };
 
-// searchBand(artist)
-// searchSong(artist)
+const doWhatItSays = () => {
+  fs.readFile("random.txt", "utf8", (err, data) => {
+    if (err) {
+      console.log(err);
+    }
 
-switch (cliriQuery) {
-  case "concert-this":
-    console.log(cliriQuery);
-    searchBand(artist);
-    break;
+    let dataArray = data.split(",");
+    cliriQuery = dataArray[0];
+    artist = dataArray[1];
+    console.log(cliriQuery, artist);
+  });
+};
 
-  case "spotify-this":
-    console.log(cliriQuery);
-    searchSong(artist);
-    break;
+  switch (cliriQuery) {
+    case "concert-this":
+      console.log(cliriQuery);
+      searchBand(artist);
+      break;
 
-  case "movie-this":
-    console.log(cliriQuery);
-    searchMovie(artist);
-    break;
-  // no default:
-}
+    case "spotify-this":
+      console.log(cliriQuery);
+      searchSong(artist);
+      break;
+
+    case "movie-this":
+      console.log(cliriQuery);
+      searchMovie(artist);
+      break;
+    case "do-what-it-says":
+      doWhatItSays();
+      break;
+    default:
+      console.log("type a valid command");
+      break;
+  }
