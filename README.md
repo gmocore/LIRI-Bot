@@ -1,71 +1,77 @@
-#CLIRI BOT
+### Installing
 
-## Command Line Interpretation and Recognition Interface.
-
-A command line application that uses information passed in from the command line to query various APIs.
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+type `npm i` into the command line (in the same folder as the liri.js application) to install the required packages included in the `package.json` file prior to running this application
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+To run this app, you will need API keys for: Bands in Town, OMDB Movie Database, and Spotify which are to be stored in a `.env` file to be accessed with the `dotenv` package.
 
-```
-Give examples
-```
+## Instructions
 
-### Installing
+type `node liri.js` followed by one of the following commands: `concert-this`, `spotify-this`, `movie-this`, or `do-what-it-says`followed by a search query.
 
-A step by step series of examples that tell you how to get a development env running
+Example:
+`node liri.js spotify-this lazy eye`
 
-Say what the step will be
+`node liri.js concert-this` [band name] - will query the bands in town API and return upcoming concerts by:
+concert venue,
+concert city,
+concert state,
+concert date (in MM/DD/YYYY format).
 
-```
-Give the example
-```
+`node liri.js spotify-this` [song name] - will query Spotify API and return song information by:
+artist name,
+song name,
+album,
+song preview url.
 
-And repeat
+`node liri.js movie-this` [movie name] - will query OMDB API and return movie info by:
+title,
+rating,
+IMDB score,
+RT score,
+country,
+langauge(s),
+plot,
+actors
 
-```
-until finished
-```
+`node liri.js do-what-it-says` (which is NOT followed by a user input value) will read the text from `random.txt` and perform a search based on the text in the file.
 
-End with an example of getting some data out of the system or using it for a little demo
+Example text from file:
+`spotify-this,"Between the Bars"`
 
-## Running the tests
+Will perform a Spotify search for Between the Bars by Elliott Smith, because, like me, you are really into sad music, and wouldn't have it any other way.
 
-Explain how to run the automated tests for this system
+## Code Overview
 
-### Break down into end to end tests
+`process.argv[2]` listens for one of the designated commands to be entered as `cliriQuery` and `process.argv.slice(3).join(" ")` sets the search terms stored in `input`which will be passed into the corresponding API request.
 
-Explain what these tests test and why
+a switch statement us used to listen for `cliriQuery` input and will route the request to the appropriate function. If `cliriQuery` does not match one of the available commands, an error will be displayed tot he user.
 
-```
-Give an example
-```
+the`axios` package is used to perform GET requests from BandsInTown and OMDB APIs and data is returned based on `input`. if `input` is a valid search it will display the results, otherwise, an error message is displayed to the user.
 
-### And coding style tests
+BandsInTown uses `moment.js` to parse returned UTC concert dates into a more readable format for the user.
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+the `node-spotify-api` package is a wrapper for the Spotify API which calls a `new Spotify`object to be instantiated. The instantiated object requires `id` and `secret` values. the `dotenv` package is used to access `id: process.env.SPOTIFY_CLIENT_ID` and `secret: process.env.SPOTIFY_CLIENT_SECRET` in the `.env` file to securely store all API keys.
+Spotify `.search` method is used to query the API based on the value of `input`and returns data based on the song, or an error is displayed to the user if an invalid song search is passed in.
 
 ## Built With
 
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+### Languages
+
+JavaScript, Node.js, JSON
+
+### Packages/APIs
+
+- [axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js
+
+- [Dotenv](https://www.npmjs.com/package/dotenv) - a zero-dependency module that loads environment variables from a `.env` file into `process.env`
+
+- [Spotify](https://www.npmjs.com/package/node-spotify-api) - A simple to use API library for the Spotify REST API.
+- [OMDB](http://www.omdbapi.com/) - The Open Movie Database
+- [Moment](https://www.momentjs.com) - Parse, validate, manipulate, and display dates and times in JavaScript
+- [fs](https://nodejs.org/api/fs.html) - File System package built into Node.js to read from and write to files
 
 ## Authors
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+- **Gerritt Black** - _Backend, API, Scripting/Everything_ - [gmocore](https://github.com/gmocore)
