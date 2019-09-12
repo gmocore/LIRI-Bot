@@ -9,10 +9,9 @@ const spotify = new Spotify({
   id: process.env.SPOTIFY_CLIENT_ID,
   secret: process.env.SPOTIFY_CLIENT_SECRET
 });
-let artist = process.argv.slice(3).join(" ");
+let input = process.argv.slice(3).join(" ");
 let cliriQuery = process.argv[2];
 
-// process.argv.slice(2).join('%20)
 const searchBand = band => {
   axios
     .get(
@@ -21,7 +20,7 @@ const searchBand = band => {
     .then(response => {
       // console.log(response.data.length)
       if(response.data.length === 0) {
-        console.log(`Sorry, ${artist} has no upcoming concerts`)
+        console.log(`Sorry, ${input} has no upcoming concerts`)
       }
       response.data.forEach(item => {
         console.log(
@@ -45,10 +44,12 @@ const searchSong = songName => {
         return console.log(`${songName} is not a valid song, try typing it correctly, or choosing a song that isn't by one of your friends`)
       }
       let data = response.tracks.items[0];
-      console.log(data.name);
-      console.log(data.artists[0].name);
-      console.log(data.album.name);
-      console.log(data.preview_url);
+      console.log(`
+      Artist: ${data.artists[0].name}
+      Song: ${data.name}
+      Album: ${data.album.name}
+      Preview: ${data.preview_url}
+      `)
     })
     .catch(err => {
       console.log("Error: ", err);
@@ -65,14 +66,17 @@ const searchMovie = movie => {
         
         return console.log(movies.data.Error, 'try typing it correctly?')
       }
-      console.log("title: ", movies.data.Title);
-      console.log("Rating: ", movies.data.Rated);
-      console.log("IMDB Rating: ", movies.data.imdbRating);
-      console.log("RT Score: ", movies.data.Ratings[1].Value);
-      console.log("Country: ", movies.data.Country);
-      console.log("Language: ", movies.data.Language);
-      console.log("Plot: ", movies.data.Plot);
-      console.log("Actors: ", movies.data.Actors);
+    
+      console.log(`
+        Title: ${movies.data.Title}
+        Rating: ${movies.data.Rated}
+        IMDB Rating: ${movies.data.imdbRating}
+        RT Score: ${movies.data.Ratings[1].Value}
+        Country: ${movies.data.Country}
+        Langauge: ${movies.data.Language}
+        Plot: ${movies.data.Plot}
+        Actors: ${movies.data.Actors}
+      `)
     })
     .catch(err => {
       console.log(err);
@@ -87,25 +91,29 @@ const doWhatItSays = () => {
 
     let dataArray = data.split(",");
     cliriQuery = dataArray[0];
-    artist = dataArray[1];
-    console.log(cliriQuery, artist);
+    input = dataArray[1];
+    
+    
+    
+    searchSong(input)
+    console.log(cliriQuery, input)
   });
 };
 
   switch (cliriQuery) {
     case "concert-this":
       console.log(cliriQuery);
-      searchBand(artist);
+      searchBand(input);
       break;
 
     case "spotify-this":
       console.log(cliriQuery);
-      searchSong(artist);
+      searchSong(input);
       break;
 
     case "movie-this":
       console.log(cliriQuery);
-      searchMovie(artist);
+      searchMovie(input);
       break;
     case "do-what-it-says":
       doWhatItSays();
