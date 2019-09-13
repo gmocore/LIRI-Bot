@@ -23,25 +23,25 @@ Example:
 `node liri.js spotify-this lazy eye`
 
 `node liri.js concert-this` [band name] - will query the bands in town API and return upcoming concerts by:
-concert venue,
-concert city,
-concert state,
+concert venue, <br>
+concert city, <br>
+concert state, <br>
 concert date (in MM/DD/YYYY format).
 
 `node liri.js spotify-this` [song name] - will query Spotify API and return song information by:
-artist name,
-song name,
-album,
+artist name, <br>
+song name, <br>
+album, <br>
 song preview url.
 
 `node liri.js movie-this` [movie name] - will query OMDB API and return movie info by:
-title,
-rating,
-IMDB score,
-RT score,
-country,
-langauge(s),
-plot,
+title, <br>
+rating, <br>
+IMDB score, <br>
+RT score, <br>
+country, <br>
+langauge(s), <br>
+plot, <br>
 actors
 
 `node liri.js do-what-it-says` (which is NOT followed by a user input value) will read the text from `random.txt` and perform a search based on the text in the file.
