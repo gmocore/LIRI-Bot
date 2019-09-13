@@ -1,3 +1,11 @@
+# CLIRI BOT
+
+
+## Command Line Interpretation and Recognition Interface.
+
+
+A command line application that uses information passed in from the command line to query various APIs.
+
 ### Installing
 
 type `npm i` into the command line (in the same folder as the liri.js application) to install the required packages included in the `package.json` file prior to running this application
