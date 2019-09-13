@@ -1,14 +1,12 @@
 # CLIRI BOT
 
-
 ## Command Line Interpretation and Recognition Interface.
-
 
 A command line application that uses information passed in from the command line to query various APIs.
 
 ### Installing
 
-type `npm i` into the command line (in the same folder as the liri.js application) to install the required packages included in the `package.json` file prior to running this application
+type `npm i` into the command line (in the same directory as the liri.js application) to install the required packages included in `package.json` prior to running this application.
 
 ### Prerequisites
 
@@ -17,6 +15,9 @@ To run this app, you will need API keys for: Bands in Town, OMDB Movie Database,
 ## Instructions
 
 type `node liri.js` followed by one of the following commands: `concert-this`, `spotify-this`, `movie-this`, or `do-what-it-says`followed by a search query.
+
+Format:
+`node` + `filename` + `command` + `search query`
 
 Example:
 `node liri.js spotify-this lazy eye`
@@ -52,9 +53,9 @@ Will perform a Spotify search for Between the Bars by Elliott Smith, because, li
 
 ## Code Overview
 
-`process.argv[2]` listens for one of the designated commands to be entered as `cliriQuery` and `process.argv.slice(3).join(" ")` sets the search terms stored in `input`which will be passed into the corresponding API request.
+`process.argv[2]` listens for one of the designated commands to be entered as `cliriQuery` and `process.argv.slice(3).join(" ")`assigns the search query to `input`which will be passed into the corresponding API request.
 
-a switch statement us used to listen for `cliriQuery` input and will route the request to the appropriate function. If `cliriQuery` does not match one of the available commands, an error will be displayed tot he user.
+a switch statement is used to listen for `cliriQuery` input and will route the request to the appropriate function. If `cliriQuery` does not match one of the available commands, an error will be displayed tot he user.
 
 the`axios` package is used to perform GET requests from BandsInTown and OMDB APIs and data is returned based on `input`. if `input` is a valid search it will display the results, otherwise, an error message is displayed to the user.
 
