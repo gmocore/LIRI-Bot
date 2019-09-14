@@ -24,7 +24,7 @@ const searchBand = band => {
     // await promise to resolve from api
     .then(response => {
       // error checking for invalid results
-      if (response.data.length === 0) {
+      if (!response.data.length) {
         console.log(`Sorry, ${input} has no upcoming concerts`);
       }
       // response return array of reults. each item of array is looped through and displayed
@@ -35,18 +35,13 @@ const searchBand = band => {
           =======================================
           =============Concert Results===========
           =======================================
-
           venue name: ${item.venue.name} 
-          city: ${item.venue.city} 
-          state: ${
+          City: ${item.venue.city} 
+          State: ${
             item.venue.region
             // UTC time is passed into moment and parsed to MM/DD/YYYY format
           } 
-          time: ${moment(item.datetime).format("MM/DD/YYYY")}
-          
-          =======================================
-          =======================================
-          =======================================
+          Date: ${moment(item.datetime).format("MM/DD/YYYY")}
           `
         );
       });
@@ -67,7 +62,7 @@ const searchSong = songName => {
     // await promise to resolve
     .then(response => {
       // error checking for invalid search
-      if (response.tracks.total === 0) {
+      if (!response.tracks.total) {
         return console.log(
           `${songName} is not a valid song, try typing it correctly, or choosing a song that isn't by one of your friends`
         );
