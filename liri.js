@@ -12,6 +12,16 @@ const spotify = new Spotify({
 let input = process.argv.slice(3).join(" ");
 let cliriQuery = process.argv[2];
 
+// log data to log.txt
+function logData(resultData) {
+  fs.appendFile('log.txt', resultData, err => {
+    if(err) {
+      return console.log(err)
+    }
+  })
+
+}
+
 // BANDS IN TOWN CONCERT SEARCH
 
 const searchBand = band => {
@@ -29,21 +39,21 @@ const searchBand = band => {
       }
       // response return array of reults. each item of array is looped through and displayed
       response.data.forEach(item => {
-        return console.log(
-          // display results to console
-          `
-          =======================================
-          =============Concert Results===========
-          =======================================
-          venue name: ${item.venue.name} 
-          City: ${item.venue.city} 
-          State: ${
-            item.venue.region
-            // UTC time is passed into moment and parsed to MM/DD/YYYY format
-          } 
-          Date: ${moment(item.datetime).format("MM/DD/YYYY")}
-          `
-        );
+        let concertData =   `
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: ${input}
+        venue name: ${item.venue.name} 
+        City: ${item.venue.city} 
+        State: ${
+          item.venue.region
+          // UTC time is passed into moment and parsed to MM/DD/YYYY format
+        } 
+        Date: ${moment(item.datetime).format("MM/DD/YYYY")}
+        `
+        logData(concertData)
+        return console.log(concertData);
       });
     })
     // check for error in api request
@@ -69,7 +79,7 @@ const searchSong = songName => {
       }
       let data = response.tracks.items[0];
       // display search results to console
-      return console.log(`
+      let songData = `
       =======================================
       ==============Song Results=============
       =======================================
@@ -82,7 +92,9 @@ const searchSong = songName => {
       =======================================
       =======================================
       =======================================
-      `);
+      `;
+      logData(songData)
+      return console.log(songData)
     })
     // check for error in api response
     .catch(err => {
@@ -106,7 +118,7 @@ const searchMovie = movie => {
         return console.log(movies.data.Error, "try typing it correctly?");
       }
       // display formatted search results to console
-      return console.log(`
+      let movieData = `
         =======================================
         =============Movie Results=============
         =======================================
@@ -124,7 +136,9 @@ const searchMovie = movie => {
         =======================================
         =======================================
 
-      `);
+      `;
+      logData(movieData)
+      return console.log(movieData)
     })
     // check for api response error
     .catch(err => {
@@ -152,6 +166,7 @@ const doWhatItSays = () => {
     searchSong(input);
   });
 };
+
 
 // listen for cliriQuery commands to run function associtated with cliriQuery input
 switch (cliriQuery) {

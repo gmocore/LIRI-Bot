@@ -1,0 +1,422 @@
+
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Exit 111 Festival (October 11-13) 
+        City: Manchester 
+        State: TN 
+        Date: 10/13/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Academy 
+        City: Birmingham 
+        State:  
+        Date: 10/26/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Glasgow Barrowlands 
+        City: Glasgow 
+        State:  
+        Date: 10/27/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: O2 Academy Bristol 
+        City: Bristol 
+        State:  
+        Date: 10/29/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: O2 Shepherd's Bush Empire 
+        City: London 
+        State:  
+        Date: 10/30/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Manchester Academy 
+        City: Manchester 
+        State:  
+        Date: 10/31/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Rock City 
+        City: Nottingham 
+        State:  
+        Date: 11/01/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Melkweg 
+        City: Amsterdam 
+        State:  
+        Date: 11/03/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Carlswerk Victoria 
+        City: Köln 
+        State:  
+        Date: 11/04/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Grosse Freiheit 36 
+        City: Hamburg 
+        State:  
+        Date: 11/05/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Ancienne Belgique 
+        City: Bruxelles 
+        State:  
+        Date: 11/07/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Élysée Montmartre 
+        City: Paris 
+        State:  
+        Date: 11/08/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Alcatraz 
+        City: Milano 
+        State:  
+        Date: 11/10/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: TonHalle München 
+        City: München 
+        State:  
+        Date: 11/11/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: HUXLEY'S NEUE WELT 
+        City: Berlin 
+        State:  
+        Date: 11/12/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Kulturfabrik Kofmehl 
+        City: Solothurn 
+        State:  
+        Date: 11/14/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: La 2 de Apolo 
+        City: Barcelona 
+        State:  
+        Date: 11/16/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Beggars 10 Year Anniversary Show 
+        City: Anaheim 
+        State: CA 
+        Date: 12/06/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        venue name: Cool 
+        City: Madrid 
+        State:  
+        Date: 11/17/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Exit 111 Festival (October 11-13) 
+        City: Manchester 
+        State: TN 
+        Date: 10/13/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Academy 
+        City: Birmingham 
+        State:  
+        Date: 10/26/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Glasgow Barrowlands 
+        City: Glasgow 
+        State:  
+        Date: 10/27/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: O2 Academy Bristol 
+        City: Bristol 
+        State:  
+        Date: 10/29/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: O2 Shepherd's Bush Empire 
+        City: London 
+        State:  
+        Date: 10/30/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Manchester Academy 
+        City: Manchester 
+        State:  
+        Date: 10/31/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Rock City 
+        City: Nottingham 
+        State:  
+        Date: 11/01/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Melkweg 
+        City: Amsterdam 
+        State:  
+        Date: 11/03/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Carlswerk Victoria 
+        City: Köln 
+        State:  
+        Date: 11/04/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Grosse Freiheit 36 
+        City: Hamburg 
+        State:  
+        Date: 11/05/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Ancienne Belgique 
+        City: Bruxelles 
+        State:  
+        Date: 11/07/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Élysée Montmartre 
+        City: Paris 
+        State:  
+        Date: 11/08/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Alcatraz 
+        City: Milano 
+        State:  
+        Date: 11/10/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: TonHalle München 
+        City: München 
+        State:  
+        Date: 11/11/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: HUXLEY'S NEUE WELT 
+        City: Berlin 
+        State:  
+        Date: 11/12/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Kulturfabrik Kofmehl 
+        City: Solothurn 
+        State:  
+        Date: 11/14/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: La 2 de Apolo 
+        City: Barcelona 
+        State:  
+        Date: 11/16/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Cool 
+        City: Madrid 
+        State:  
+        Date: 11/17/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: thrice
+        venue name: Beggars 10 Year Anniversary Show 
+        City: Anaheim 
+        State: CA 
+        Date: 12/06/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: foo fighters
+        venue name: Bourbon and Beyond 
+        City: Louisville 
+        State: KY 
+        Date: 09/20/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: foo fighters
+        venue name: Pilgrimage Festival 
+        City: Franklin 
+        State: TN 
+        Date: 09/22/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: foo fighters
+        venue name: El Campin Stadium 
+        City: Bogota 
+        State:  
+        Date: 10/01/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: foo fighters
+        venue name: Estadio Nacional de Costa Rica 
+        City: San Jose 
+        State:  
+        Date: 10/04/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: foo fighters
+        venue name: Intersect 
+        City: Las Vegas 
+        State: NV 
+        Date: 12/07/2019
+        
+        =======================================
+        =============Concert Results===========
+        =======================================
+        Band: foo fighters
+        venue name: Rock in Rio 
+        City: Rio De Janeiro 
+        State:  
+        Date: 09/28/2019
+        
+      =======================================
+      ==============Song Results=============
+      =======================================
+
+      Artist: Elliott Smith
+      Song: Between the Bars
+      Album: Either/Or
+      Preview: https://p.scdn.co/mp3-preview/c3b9e2d16970ddb644bc1b5e13ef8af35f7125d5?cid=2e5b28107ea741959e8819d0cc87ee99
+
+      =======================================
+      =======================================
+      =======================================
+      
+        =======================================
+        =============Movie Results=============
+        =======================================
+
+        Title: Inception
+        Rating: PG-13
+        IMDB Rating: 8.8
+        RT Score: 87%
+        Country: USA, UK
+        Langauge: English, Japanese, French
+        Plot: A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.
+        Actors: Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy
+
+        =======================================
+        =======================================
+        =======================================
+
+      
+      =======================================
+      ==============Song Results=============
+      =======================================
+
+      Artist: Elliott Smith
+      Song: Between the Bars
+      Album: Either/Or
+      Preview: https://p.scdn.co/mp3-preview/c3b9e2d16970ddb644bc1b5e13ef8af35f7125d5?cid=2e5b28107ea741959e8819d0cc87ee99
+
+      =======================================
+      =======================================
+      =======================================
+      

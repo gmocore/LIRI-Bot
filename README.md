@@ -87,25 +87,25 @@ JavaScript, Node.js, JSON
 
 # Examples with Images
 
-concert this command
+### concert-this command
 ![concert-this-image](CLIRI&#32;screenshots/concert-this&#32;band.png)
-concert this results
+### concert-this results
 ![concer-this-result](CLIRI&#32;screenshots/concert&#32;this&#32;results.png)
-concert this invalid
+### concert-this invalid
 ![concert-invalid](CLIRI&#32;screenshots/invalid&#32;band.png)
-spotify this command
+### spotify-this command
 ![spotify-command](CLIRI&#32;screenshots/spotify&#32;input.png)
-spotify this results
+### spotify-this results
 ![spotify-results](CLIRI&#32;screenshots/spotify&#32;results.png)
-spotifty this invalid
+### spotifty-this invalid
 ![spotify-invalid](CLIRI&#32;screenshots/spotify&#32;invalid.png)
-movie this command
+### movie-this command
 ![movie-command](CLIRI&#32;screenshots/movie&#32;input.png)
-movie this result
+### movie-this result
 ![mobie-result](CLIRI&#32;screenshots/movie&#32;result.png)
-movie this invalid
+### movie-this invalid
 ![invalid-movie](CLIRI&#32;screenshots/invalid&#32;movie.png)
-do what it says
+### do-what-it-says
 ![dwis](CLIRI&#32;screenshots/swis&#32;input.png)
-invalid command
+### invalid command
 ![invalid-command](CLIRI&#32;screenshots/invalid&#32;command.png)
